@@ -10,5 +10,23 @@ public class State
     private String xName = "";
     private String oName = "";
     private int[][] board = new int[Constants.BOARD_SIZE][Constants.BOARD_SIZE];
+
+    public boolean isWinner() {
+        // You will write this code!!
+        
+    }
+
+    public boolean isTie() {
+        // You will write this code too!!
+    }
+
+    public int getBoardCell(int row, int col) {
+        return this.board[row][col];
+    }
+
+    public void setBoardCell(int row, int col, int value) {
+        this.board[row][col] = value;
+    }
+
 }
 
