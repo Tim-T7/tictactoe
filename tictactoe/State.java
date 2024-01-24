@@ -35,7 +35,46 @@ public class State
 
     public boolean isTie() {
         // You will write this code too!!
-        
+        for (int row=0; row<Constants.BOARD_SIZE; row++) {
+            for (int col=0; col<Constants.BOARD_SIZE; col++) {
+                if (getBoardCell(row,col )== Constants.BLANK) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+      public int getGameState() {
+        return gameState;
+    }
+
+    public void setGameState(int gameState) {
+        this.gameState = gameState;
+    }
+
+    public int getWhoseMove() {
+        return whoseMove;
+    }
+
+    public void setWhoseMore(int whoseMove) {
+        this.whoseMove = whoseMove;
+    }
+
+    public String getXName() {
+        return xName;
+    }
+
+    public void setXName(String xName) {
+        this.xName = xName;
+    }
+
+    public String getOName() {
+        return oName;
+    }
+
+    public void setOName(String oName) {
+        this.oName = oName;
     }
 
     public int getBoardCell(int row, int col) {
@@ -47,4 +86,3 @@ public class State
     }
 
 }
-
