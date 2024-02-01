@@ -27,8 +27,6 @@ public class EventLoop {
                 col = ui.getMoveCol(state.getWhoseMove(), state.getXName(), state.getOName());
                 if (ui.isLegalMove(state, row, col)) {
                     state.setGameState(Constants.MAKE_MOVE);
-                } else {
-                    ui.printInvalidRowOrColumn(int rowOrCol)
                 }
 
             } else if (gameState == Constants.GET_O_MOVE) {
