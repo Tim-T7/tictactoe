@@ -42,32 +42,42 @@ public class UI
 
     public int getMoveRow(int whoseMove, String xName, String oName) {
         int row =0;
-        if (row<=0 || row >=4) {
-            System.out.printf(Constants.INVALID_MOVE_ERROR, Constants.GET_ROW_MOVE, getXOrO(whoseMove), getPlayerName(whoseMove, xName, oName));
-            row = scanner.nextInt();
-        }
-        while (row <= 0 || row >= 4) {
+        while (true) {
+            System.out.printf(Constants.GET_ROW_MOVE, getXOrO(whoseMove), getPlayerName(whoseMove, xName, oName));
             try {
-                System.out.printf(Constants.GET_ROW_MOVE, getXOrO(whoseMove), getPlayerName(whoseMove, xName, oName));
                 row = scanner.nextInt();
+                if (row < 1 || row > 3) {
+                    printInvalidRowOrColumn();
+                    System.out.println();
+                    scanner.nextLine();
+                } else {
+                    return row;
+                }
             } catch (Exception e) {
-                System.out.println(Constants.INVALID_ROW_OR_COLUMN);
+                printInvalidRowOrColumn();
+                System.out.println();
             }
         }
-        return row;
     }
 
     public int getMoveCol(int whoseMove, String xName, String oName) {
         int col =0;
-        while (col <= 0 || col >= 4) {
+         while (true) {
+            System.out.printf(Constants.GET_ROW_MOVE, getXOrO(whoseMove), getPlayerName(whoseMove, xName, oName));
             try {
-                System.out.printf(Constants.GET_COL_MOVE, getXOrO(whoseMove), getPlayerName(whoseMove, xName, oName));
                 col = scanner.nextInt();
+                if (col < 1 || col > 3) {
+                    printInvalidRowOrColumn();
+                    System.out.println();
+                    scanner.nextLine();
+                } else {
+                    return col;
+                }
             } catch (Exception e) {
-                System.out.println(Constants.INVALID_ROW_OR_COLUMN);
+                printInvalidRowOrColumn();
+                System.out.println();
             }
         }
-        return col;
     }
 
     public boolean startNewGame() {
