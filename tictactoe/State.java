@@ -45,7 +45,7 @@ public class State
         return true;
     }
 
-      public int getGameState() {
+    public int getGameState() {
         return gameState;
     }
 

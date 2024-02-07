@@ -56,6 +56,7 @@ public class UI
             } catch (Exception e) {
                 printInvalidRowOrColumn();
                 System.out.println();
+                scanner.nextLine();
             }
         }
     }
@@ -63,7 +64,7 @@ public class UI
     public int getMoveCol(int whoseMove, String xName, String oName) {
         int col =0;
          while (true) {
-            System.out.printf(Constants.GET_ROW_MOVE, getXOrO(whoseMove), getPlayerName(whoseMove, xName, oName));
+            System.out.printf(Constants.GET_COL_MOVE, getXOrO(whoseMove), getPlayerName(whoseMove, xName, oName));
             try {
                 col = scanner.nextInt();
                 if (col < 1 || col > 3) {
