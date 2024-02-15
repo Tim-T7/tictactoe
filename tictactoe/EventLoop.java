@@ -11,8 +11,9 @@ public class EventLoop {
         while (state.getGameState() != Constants.QUIT_PROGRAM) {
             int gameState = state.getGameState();
             if (gameState == Constants.STANDBY) {
+                ui.printWelcome();
+                state.clearBoard();
                 state.setGameState(Constants.GET_X_NAME);
-
             } else if (gameState == Constants.GET_X_NAME) {
                 state.setXName(ui.promptForName("X"));
                 state.setGameState(Constants.GET_O_NAME);

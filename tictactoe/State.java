@@ -85,4 +85,12 @@ public class State
         this.board[row][col] = value;
     }
 
+    public void clearBoard(){
+        for (int row = 0; row <3; row++){
+            for (int col = 0; col <3; col++){
+                setBoardCell(row,col,Constants.BLANK);
+            }
+        }
+    }
+
 }
