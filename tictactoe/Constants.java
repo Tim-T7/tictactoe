@@ -7,8 +7,7 @@ package tictactoe;
 public class Constants
 {
     // Valid board size
-    public static final int BOARD_SIZE = 3;
-
+    public static final int BOARD_SIZE = 7;
     // Valid board values
     public static final int X = -1;    // Indicates an "X"
     public static final int O = 1;     // Indicates an "O"
@@ -29,10 +28,10 @@ public class Constants
     public static final int QUIT_PROGRAM = 11;
     
     // Strings
-    public static final String DIVIDER_STRING = "|---|---|---|";
-    public static final String BOARD_STRING = "| %s | %s | %s | ";
+    public static final String DIVIDER_STRING = "|---|---|---|---|---|---|---|";
+    public static final String BOARD_STRING = "| %s | %s | %s | %s | %s | %s | %s | ";
     public static final String GET_PLAYER_NAME = "Player %s: What is your name? -->";
-    public static final String TITLE = "Thanks for playing Tic-Tac-Toe!";
+    public static final String TITLE = "Thanks for playing Connect-4!";
     public static final String GET_ROW_MOVE = "Player %s (%s): Enter the row for your next move -->";
     public static final String GET_COL_MOVE = "Player %s (%s): Enter the column for your next move -->";
     public static final String INVALID_ROW_OR_COLUMN = "Your row and column must be 1, 2, or 3";
